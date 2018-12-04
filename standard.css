@@ -293,6 +293,7 @@ div.c {
 	background-size:100px 100px;
 	background-repeat:no-repeat;
 	position:relative;
+	filter: brightness(100%) !important;
 }
 
 .arrowdown:hover{
