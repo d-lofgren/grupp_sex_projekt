@@ -160,16 +160,15 @@ subject-divider{
 	float:left;
 	opacity:0.03;
 }
-logo{
+.logo{
 	display: block;
-	background-image: url("resources/logo.png");
-	background-repeat: no-repeat;
-    background-size: cover;
 	width:120px;
 	height:120px;
 	margin-left:20%;
 	margin-bottom:0.5%;
 	margin-top:0.5%;
+	width:auto;
+	object-fit:cover;
 }
 footer{
 	width:100%;
