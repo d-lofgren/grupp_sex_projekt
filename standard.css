@@ -162,7 +162,7 @@ subject-divider{
 }
 logo{
 	display: block;
-	background-image: url("resources/logo.png");
+	background-image: url("resources\logo.png");
 	background-repeat: no-repeat;
     background-size: cover;
 	width:120px;
@@ -283,7 +283,7 @@ div.c {
 }
 /* Nedåtpilen under textrubriken */
 .arrowdown{
-	background-image:url(resources/down.png);
+	background-image:url("resources\down.png");
 	height:100px;
 	width:100px;
 	background-size:100px 100px;
