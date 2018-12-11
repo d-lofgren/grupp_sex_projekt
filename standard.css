@@ -330,8 +330,3 @@ div.c {
 a:visited { 
     color: blue;
 }
-
-div#test {
-         border: #000 0px solid;
-         padding: 10px 40px 40px 40px;
-}
