@@ -1,0 +1,207 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grupp 6</title>
+  <meta name="description" content="Projekt i datateknik">
+  <meta name="author" content="Grupp 6">
+  <link rel="stylesheet" type="text/css" href="standard.css">
+	
+    <script>
+        var pos = 0;
+        var test;
+        var test_status;
+        var question;
+        var choice;
+        var choices;
+        var chA;
+        var chB;
+        var chC;
+        var correct = 0;
+        var questions = [
+            [
+                "Question 1",
+                "Answer A",
+                "Answer B (c)",
+                "Answer C",
+                "B",
+                "feedback 1"
+            ],
+            [
+                "Question 2",
+                "Answer A",
+                "Answer B",
+                "Answer C (c)",
+                "C",
+                "feedback 2"
+            ],
+            [
+                "Question 3",
+                "Answer A (c)",
+                "Answer B",
+                "Answer C",
+                "A",
+                "feedback 3"
+            ],
+            [
+                "Question 4",
+                "Answer A",
+                "Answer B",
+                "Answer C  (c)",
+                "C",
+                "feedback 4"
+            ],
+            [
+                "Question 5",
+                "Answer A (c)",
+                "Answer B",
+                "Answer C",
+                "A",
+                "feedback 5"
+            ],
+            [
+                "Question 6",
+                "Answer A",
+                "Answer B (c)",
+                "Answer C",
+                "B",
+                "feedback 6"
+            ],
+            [
+                "Question 7",
+                "Answer A (c)",
+                "Answer B",
+                "Answer C",
+                "A",
+                "feedback 7"
+            ],
+            [
+                "Question 8",
+                "Answer A",
+                "Answer B",
+                "Answer C (c)",
+                "C",
+                "feedback 8"
+            ],
+            [
+                "Question 9",
+                "Answer A",
+                "Answer B",
+                "Answer C (c)",
+                "C",
+                "feedback 9"
+            ],
+            [
+                "Question 10",
+                "Answer A (c)",
+                "Answer B",
+                "Answer C",
+                "A",
+                "feedback 10"
+            ]
+        ];
+        function _(x) {
+            return document.getElementById(x);
+        }
+        function renderQuestion() {
+            test = _("test");
+            if (pos >= questions.length) {
+                test.innerHTML = "<h2>Du svarade rätt på " + correct + " av " + questions.length + " frågor.</h2>";
+                _("test_status").innerHTML = "Quiz avslutat";
+                pos = 0;
+                correct = 0;
+                return false;
+            }
+            _("test_status").innerHTML = "   Fråga " + (pos + 1) + " av " + questions.length + ".";
+            question = questions[pos][0];
+            chA = questions[pos][1];
+            chB = questions[pos][2];
+            chC = questions[pos][3];
+            test.innerHTML = "<h3>" + question + "</h3>";
+            test.innerHTML += "<input type='radio' name='choices' value='A'> " + chA + "<br>";
+            test.innerHTML += "<input type='radio' name='choices' value='B'> " + chB + "<br>";
+            test.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br><br>";
+            test.innerHTML += "<button onclick='checkAnswer()'> Kontrollera svar</button>";
+        }
+        function checkAnswer() {
+            choices = document.getElementsByName("choices");
+            for (var i = 0; i < choices.length; i++) {
+                if (choices[i].checked) {
+                    choice = choices[i].value;
+                }
+            }
+            if (choice == questions[pos][4]) {
+                correct++
+            } else {
+                alert("Du svarade fel, läs mer i avsnittet om " + questions[pos][5] + ".")
+            }
+            pos++
+            renderQuestion();
+        }
+        window.addEventListener("load", renderQuestion, false);
+    </script>
+
+</head>
+
+<body>
+  <main>
+	<a href ="index.html"><img class="logo" src="resources\logo.png"></img></a>
+	<div class="navbar1">
+		<div class="vl" id="first-item"></div>
+		<a href="global.html"><navbar-items><div class="navbar-text"></div>Global uppvärmning</navbar-items></a>
+		<div class="vl"></div>
+		<a href="vatten.html"><navbar-items><div class="navbar-text">Vattenföroreningar</div> </navbar-items></a>
+		<div class="vl"></div>
+		<a href="avfall.html"><navbar-items> <div class="navbar-text">Avfall</div> </navbar-items></a>
+		<div class="vl"></div>
+		<a href="skog.html"><navbar-items> <div class="navbar-text">Skogsskövling </div> </navbar-items></a>
+		<div class="vl"></div>
+		<a href="quiz.html"><navbar-items> <div class="navbar-textcurrentpage">Superhemlig quiz </div> </navbar-items></a>
+		<div class="vl"></div>
+	</div>
+  <div class="container">
+    <img src="resources\quiz.jpg" alt="Notebook">
+	<div class="content">
+	<h1 class ="titel1"><center>QUIZ-DAGS!</center></h1>	
+	<center><a href="quiz.html#start"><img class="arrowdown" src="resources/down.png"></img></center></a>
+    </div>
+</div>
+	
+
+<br id="start">
+<content>
+<div class="textborder"><span>
+	
+    <h2 id="test_status"></h2>
+    <div id="test"> </div>
+
+
+
+</div>
+</content>
+</div>
+<div class="row">
+  <div class="column">
+    <img class="image-resize"  src="resources\vatten1.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="image-resize" src="resources\vatten2.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="image-resize" src="resources\vatten3.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<footer>
+  <div class="c">
+    <a href="avfall.html" class="previous">&laquo; Föregående</a>
+    <a href="quiz.html" class="next">Nästa &raquo;</a>
+    
+</div>
+</footer>
+
+	  <script src="js/scripts.js"></script>
+  </main>
+</body>
+</html>
