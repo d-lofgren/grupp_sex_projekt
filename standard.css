@@ -287,6 +287,12 @@ navbar-items:hover{
 	position:relative;
 	filter: brightness(100%) !important;
 }
+/* div för Nästa/Föregående */
+div.c {
+    text-align: right;
+		width: 90%;
+		height: 90%; * [ANVÄNDS EJ]/
+}
 /* Hover för Nästa/förgående*/
 .arrowdown:hover{
 	height:110px;
