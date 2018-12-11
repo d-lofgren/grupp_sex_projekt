@@ -305,8 +305,8 @@ div.c {
 
 /* Bild som tillhör texterna */
 .text-image{
-	width:30%;
-	margin-left:35%;
+	width:80%;
+	margin-left:10%;
 	object-fit:cover;
 }
 
