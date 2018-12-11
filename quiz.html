@@ -9,17 +9,19 @@
   <link rel="stylesheet" type="text/css" href="standard.css">
 	
     <script>
-        var pos = 0;
-        var test;
-        var test_status;
-        var question;
-        var choice;
-        var choices;
-        var chA;
-        var chB;
-        var chC;
-        var correct = 0;
+        var pos = 0; /* Vilken fråga man är på, börjar på 0 */
+        var test; /* Självaste quizen */
+        var test_status; /* Texten där det står vilken fråga du är på */
+        var question; /* Själva frågan */
+        var choice; /* Alternativet du väljer */
+        var choices; /* De klickabara alternativen */
+        var chA; /* Svarsalternativ A */
+        var chB; /* Svarsalternativ B */
+        var chC; /* Svarsalternativ C */
+        var correct = 0; /* Antalet korrekta svar, börjarm på noll och räknar upp */
 
+	
+	/* En matris med frågorna och feedback */
         var questions = [
             [
                 "Vilket land i världen släpper ut mest mängd koldioxid totalt?",
@@ -50,7 +52,7 @@
 
             [
                 "Ett exempel på näringsförorening kan vara att…",
-                "gödsel, innehållande kväve och fosfor, introduceras i en flod och kan rubba ekosystemets balans.",
+                "det fiskas för mycket så att fiskebeståndet minskar.",
                 "man spolar ner någonting i toaletten som avloppet inte kan hantera.",
                 "gödsel, innehållande kväve och fosfor, introduceras i en flod och kan rubba ekosystemets balans.",
                 "C",
