@@ -247,7 +247,7 @@ navbar-items:hover{
 #first-item{
 	margin-left:25%;
 }
-
+/* Föregående knappen */
 .previous {
     background-color: #f1f1f1;
     color: black;
@@ -256,16 +256,8 @@ navbar-items:hover{
 		padding: 10px 18px;
 }
 
-div.text {
-	margin-top:5%;
-	margin-bottom:5%;
-}
-div.c {
-    text-align: right;
-		width: 90%;
-		height: 90%;
-}
 
+/* Nästa sida knappen */
 .next {
     background-color: #4CAF50;
     color: white;
@@ -280,7 +272,7 @@ div.c {
 		display: inline-block;
 		padding: 10px 18px;
 }
-
+/* Rektangel ruta runt textdelen*/
 .textborder{
 		
 	border:1px solid #999;
@@ -295,7 +287,7 @@ div.c {
 	position:relative;
 	filter: brightness(100%) !important;
 }
-
+/* Hover för Nästa/förgående*/
 .arrowdown:hover{
 	height:110px;
 	width:110px;
